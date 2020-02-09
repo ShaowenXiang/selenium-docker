@@ -1,0 +1,10 @@
+version: "3"
+services:
+  chrome:
+    image: selenium/node-chrome:3.14
+    environment:
+      - HUB_HOST=10.1.0.13
+  firefox:
+    image: selenium/node-firefox:3.14
+    environment:
+      - HUB_HOST=10.1.0.13

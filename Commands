@@ -1,0 +1,39 @@
+###Run docker using image qiqi
+docker run -it --entrypoint=/bin/sh -v /Users/Xiansh01/Udemy/TestWithDocker/selenium-docker-master/output:/usr/share/udemy/test-output qiqi
+
+## Run test case using jar files
+java -cp selenium-docker.jar:selenium-docker-tests.jar:libs/* -DHUB_HOST=192.168.1.100 org.testng.TestNG search-module.xml
+
+
+
+
+
+##############zalenium
+https://opensource.zalando.com/zalenium/
+# Pull docker-selenium
+  docker pull elgalu/selenium
+
+# Pull Zalenium
+  docker pull dosel/zalenium
+
+    # Run it!
+    docker run --rm -ti --name zalenium -p 4444:4444 \
+      -v /var/run/docker.sock:/var/run/docker.sock \
+      -v /tmp/videos:/home/seluser/videos \
+      --privileged dosel/zalenium start
+
+    # Point your tests to http://localhost:4444/wd/hub and run them
+
+    # Stop
+    docker stop zalenium
+
+###URL to see vnc on zalenium
+http://localhost:4444/grid/admin/live
+
+
+#####jenkins
+docker pull jenkins/jenkins:lts
+docker run -p 8080:8080 -p 50000:50000 -v "$PWD/jenkins:/var/jenkins_home" jenkins/jenkins:lts
+
+docker build -t="qiqi"
+docker push qiqi
