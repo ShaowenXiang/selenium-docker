@@ -29,11 +29,11 @@ https://opensource.zalando.com/zalenium/
 
 ###URL to see vnc on zalenium
 http://localhost:4444/grid/admin/live
-
+http://localhost:4444/dashboard/#
 
 #####jenkins
 docker pull jenkins/jenkins:lts
 docker run -p 8080:8080 -p 50000:50000 -v "$PWD/jenkins:/var/jenkins_home" jenkins/jenkins:lts
 
-docker build -t="qiqi"
-docker push qiqi
+docker build -t=sxiang/selenium-docker .
+docker push sxiang/selenium-docker

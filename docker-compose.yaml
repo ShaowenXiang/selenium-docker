@@ -13,14 +13,15 @@ services:
       start --desiredContainers 2 
             --maxDockerSeleniumContainers 2 
             --maxTestSessions 3 
-            --videoRecordingEnabled false
-  search-module:
-    image: vinsdocker/selenium-docker
+            --videoRecordingEnabled true
+
+  profiling-module:
+    image: sxiang/profiling
     depends_on:
       - hub
     environment:
       - HUB_HOST=hub
       - BROWSER=chrome
-      - MODULE=search-module.xml
+      - MODULE=profilingtest.xml
     volumes:
       - ./output/search-result:/usr/share/udemy/test-output

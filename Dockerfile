@@ -15,8 +15,7 @@ ADD target/libs							libs
 # please ADD that as well
 
 # ADD suite files
-ADD book-flight-module.xml				book-flight-module.xml
-ADD search-module.xml					search-module.xml
+ADD profilingtest.xml					profilingtest.xml
 
 # ADD health check script
 ADD healthcheck.sh                      healthcheck.sh

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="profilingtest">
+    <test name="profilingtest">
+        <classes>
+            <class name="com.profiling.ProfilingTest" />
+        </classes>
+    </test>
+
+    <test name="profilingtest">
+        <classes>
+            <class name="com.profiling.ProfilingTest" />
+        </classes>
+    </test>
+</suite>
